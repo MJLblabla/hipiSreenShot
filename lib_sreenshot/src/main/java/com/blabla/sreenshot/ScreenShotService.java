@@ -49,7 +49,7 @@ public class ScreenShotService extends Service {
 
     @SuppressLint("WrongConstant")
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void start(int resultCode, Intent resultData, ScreenShotPlugin.OnScreenShotListener callback) {
+    public void start(int resultCode, Intent resultData, final ScreenShotPlugin.OnScreenShotListener callback) {
         mediaProjectionManager = (MediaProjectionManager) getSystemService(Context.MEDIA_PROJECTION_SERVICE);
         if (mediaProjectionManager == null) {
            stopSelf();
